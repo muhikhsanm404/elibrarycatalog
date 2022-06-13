@@ -1,0 +1,26 @@
+a {
+    color: #FF8B3D !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #c1692f !important;
+}
+
+a.btn:hover {
+    color: #FF8B3D !important;
+}
+
+.custom-bg {
+    background-color: #27445C !important;
+}
+
+button.custom-bg,
+input.custom-bg {
+    color: #FF8B3D !important;
+}
+
+
+.footer-links-ul {
+    list-style: none;
+}

@@ -1,0 +1,5 @@
+pdfs/*
+book_images/*
+
+!pdfs/index.php
+!book_images/index.php
