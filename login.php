@@ -73,11 +73,11 @@ if (isset($err)) {
 ?>
 
 <form action="" method="post">
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label for="name">Email ID:</label>
 		<input type="text" name="email" class="form-control" required>
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label for="name">Password:</label>
 		<input type="password" name="password" class="form-control" required>
 	</div>
@@ -89,7 +89,7 @@ if (isset($err)) {
 	}
 	?>
 
-	<div class="form-group text-center">
+	<div class="form-group mb-2 text-center">
 		<button type="submit" name="login" class="btn btn-primary" style="background-color:#27445C; color:#FF8B3D; border:none;">Login</button>
 	</div>
 </form>

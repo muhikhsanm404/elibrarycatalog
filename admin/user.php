@@ -93,27 +93,27 @@ if (isset($_GET['id'])) {
 ?>
 
 <form action="" method="post">
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>ID:</label>
 		<input type="number" class="form-control" value="<?php echo $row['id']; ?>" name="user_id" readonly>
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Name:</label>
 		<input type="text" class="form-control" value="<?php echo $row['name']; ?>" name="name">
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Email:</label>
 		<input type="text" class="form-control" value="<?php echo $row['email']; ?>" name="email">
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Mobile:</label>
 		<input type="text" class="form-control" value="<?php echo $row['mobile']; ?>" name="mobile">
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Address:</label>
 		<textarea rows="3" cols="40" name="address" class="form-control"><?php echo $row['address']; ?></textarea>
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Admin Role:</label>
 		<input type="checkbox" name="is_admin" id="is_admin" value="1" <?php if ($row['is_admin'] == 1) { echo 'checked'; } ?>>
 	</div>
@@ -126,27 +126,27 @@ if (isset($_GET['id'])) {
 ?>
 
 <form action="" method="post">
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Name:</label>
 		<input type="text" class="form-control" name="name">
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Email:</label>
 		<input type="text" class="form-control" name="email">
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Password:</label>
 		<input type="text" class="form-control" name="password">
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Mobile:</label>
 		<input type="text" class="form-control" name="mobile">
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Address:</label>
 		<textarea rows="3" cols="40" name="address" class="form-control"></textarea>
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Admin Role:</label>
 		<input type="checkbox" name="is_admin" value="1">
 	</div>

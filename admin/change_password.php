@@ -47,11 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 <div class="container my-4 rounded border shadow p-3" style="width:400px;">
 	<form action="" method="post">
-		<div class="form-group">
+		<div class="form-group mb-2">
 			<label>Enter Current Password:</label>
 			<input type="password" name="old_password" class="form-control">
 		</div>
-		<div class="form-group">
+		<div class="form-group mb-2">
 			<label>Enter New Password:</label>
 			<input type="password" name="new_password" class="form-control">
 		</div>

@@ -107,15 +107,15 @@ if (isset($_GET['id'])) {
 ?>
 
 <form action="" method="post">
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>ID:</label>
         <input type="number" class="form-control" value="<?php echo $row['id']; ?>" name="book_id" readonly>
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Name:</label>
         <input type="text" class="form-control" value="<?php echo $row['name']; ?>" name="name">
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Author:</label>
         
         <select name="author_id" class="form-control">
@@ -136,7 +136,7 @@ if (isset($_GET['id'])) {
         </select>
 
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Genre:</label>
         
         <select name="cat_id" class="form-control">
@@ -156,11 +156,11 @@ if (isset($_GET['id'])) {
         </select>
 
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Year:</label>
         <input type="text" class="form-control" value="<?php echo $row['year']; ?>" name="year">
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Description:</label>
         <textarea rows="3" cols="40" name="description" class="form-control"><?php echo $row['description']; ?></textarea>
     </div>
@@ -173,11 +173,11 @@ if (isset($_GET['id'])) {
 ?>
 
 <form action="" method="post" enctype="multipart/form-data">
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Name:</label>
         <input type="text" class="form-control" name="name">
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Author:</label>
 
         <select name="author_id" class="form-control">
@@ -191,7 +191,7 @@ if (isset($_GET['id'])) {
         </select>
 
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Genre:</label>
 
         <select name="cat_id" class="form-control">
@@ -205,19 +205,19 @@ if (isset($_GET['id'])) {
         </select>
 
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Year:</label>
         <input type="text" class="form-control" name="year">
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Description:</label>
         <textarea rows="3" cols="40" name="description" class="form-control"></textarea>
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>Image:</label>
         <input type="file" class="form-control" name="image">
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label>PDF:</label>
         <input type="file" class="form-control" name="pdf">
     </div>

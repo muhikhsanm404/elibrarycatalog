@@ -84,11 +84,11 @@ if (isset($_GET['id'])) {
 ?>
 
 <form action="" method="post">
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>ID:</label>
 		<input type="number" class="form-control" value="<?php echo $row['id']; ?>" name="cat_id" readonly>
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Name:</label>
 		<input type="text" class="form-control" value="<?php echo $row['name']; ?>" name="name">
 	</div>
@@ -101,7 +101,7 @@ if (isset($_GET['id'])) {
 ?>
 
 <form action="" method="post">
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label>Name:</label>
 		<input type="text" class="form-control" name="name">
 	</div>

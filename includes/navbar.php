@@ -26,7 +26,7 @@
             ?>
             
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" style="cursor:pointer;">Account</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="cursor:pointer;">Account</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="dashboard.php">Dashboard</a>
                     <a class="dropdown-item" href="profile.php">My Profile</a>

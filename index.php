@@ -15,42 +15,69 @@ books.year AS book_year,
 authors.name AS author_name
 FROM books
 JOIN category ON books.cat_id = category.id
-JOIN authors ON books.author_id = authors.id;";
+JOIN authors ON books.author_id = authors.id";
+
+if(isset($_GET['search'])) {
+	$sql = $sql . " WHERE LOWER(books.name) LIKE LOWER('%" . $_GET['search'] . "%');";
+} else {
+	$sql = $sql . ";";
+}
 
 $query_run = mysqli_query($conn, $sql);
 ?>
 
 <div class="container mt-5">
-<div class="card-deck">
+
+<div class="my-3" style="width:300px;">
+	<form action="" method="get">
+		<input type="search" name="search" placeholder="Search here..." class="form-control"
+		<?php if(isset($_GET['search'])) { echo "value='" . $_GET['search'] . "'"; } ?>>
+	</form>
+
+	<?php
+	if(isset($_GET['search'])) {
+		echo "<div class='mt-2'>Showing results for: <b>" . $_GET['search'] . "</b></div>";
+	}
+	?>
+
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
 
 	<?php
 	while($row = mysqli_fetch_assoc($query_run)){
 	?>
 
-		<div class="card">
+	<div class="col">
+		<div class="card h-100">
+			
 			<img src="<?php echo $row['book_image']; ?>" class="card-img-top">
 			<div class="card-body">
 				<h5 class="card-title">
 					<a href="book.php?id=<?php echo $row["book_id"]; ?>">
 						<?php echo $row["book_name"]; ?></h5>
 					</a>
-				<p class="card-text">
-					<div>
-						Author: <?php echo $row["author_name"]; ?>
-					</div>
-					<div>
-						Year: <?php echo $row['book_year']; ?>
-					</div>
-					<div>
-						Genre: <?php echo $row['category_name']; ?>
-					</div>
-				</p>
+				</h5>
+			<p class="card-text">
+			<div>
+				Author: <?php echo $row["author_name"]; ?>
 			</div>
+			<div>
+				Year: <?php echo $row['book_year']; ?>
+			</div>
+			<div>
+				Genre: <?php echo $row['category_name']; ?>
+			</div>
+			</p>
 		</div>
+
+		</div>
+	</div>
 
 	<?php
 	}
 	?>
+	
 </div>
 </div>
 

@@ -3,7 +3,7 @@
 
         <a class="navbar-brand" href="index.php">Admin Dashboard</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -18,7 +18,7 @@
         <ul class="nav">
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" style="cursor:pointer;">Account</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"  style="cursor:pointer;">Account</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="index.php">Dashboard</a>
                     <a class="dropdown-item" href="profile.php">My Profile</a>

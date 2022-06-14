@@ -41,19 +41,19 @@ $row = mysqli_fetch_assoc($result);
 	
 <div class="container my-4 rounded border shadow p-3" style="width:400px;">
 	<form action="" method="post">
-		<div class="form-group">
+		<div class="form-group mb-2">
 			<label>Name:</label>
 			<input type="text" class="form-control" value="<?php echo $row['name']; ?>" name="name">
 		</div>
-		<div class="form-group">
+		<div class="form-group mb-2">
 			<label>Email:</label>
 			<input type="text" class="form-control" value="<?php echo $row['email']; ?>" name="email">
 		</div>
-		<div class="form-group">
+		<div class="form-group mb-2">
 			<label>Mobile:</label>
 			<input type="text" class="form-control" value="<?php echo $row['mobile']; ?>" name="mobile">
 		</div>
-		<div class="form-group">
+		<div class="form-group mb-2">
 			<label>Address:</label>
 			<textarea rows="3" cols="40" name="address" class="form-control"><?php echo $row['address']; ?></textarea>
 		</div>

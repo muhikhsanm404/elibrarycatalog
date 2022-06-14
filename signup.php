@@ -41,27 +41,27 @@ include("includes/navbar.php");
 <h3 class=text-center>User Registration Form</h3>
 
 <form action="" method="post">
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label for="name">Full Name:</label>
 		<input type="text" name="name" class="form-control" required>
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label for="name">Email ID:</label>
 		<input type="text" name="email" class="form-control" required>
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label for="name">Password:</label>
 		<input type="password" name="password" class="form-control" required>
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label for="name">Mobile Number:</label>
 		<input type="text" name="mobile" class="form-control" required>
 	</div>
-	<div class="form-group">
+	<div class="form-group mb-2">
 		<label for="name">Address:</label>
 		<textarea rows="3" cols="40" class="form-control" name="address"></textarea>
 	</div>
-	<div class="form-group text-center">
+	<div class="form-group mb-2 text-center">
 		<button type="submit" class="btn btn-primary" style="background-color:#27445C; color:#FF8B3D; border:none;">Register</button>
 	</div>
 </form>
