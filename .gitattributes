@@ -1,1 +1,3 @@
-bootstrap-4.4.1/** linguist-vendored
+bootstrap.min.css linguist-vendored
+bootstrap.bundle.min.js linguist-vendored
+chart.js linguist-vendored
