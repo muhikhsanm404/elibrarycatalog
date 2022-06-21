@@ -26,12 +26,16 @@ if(isset($_GET['search'])) {
 $query_run = mysqli_query($conn, $sql);
 ?>
 
-<div class="container mt-5">
+<div class="container mt-4">
 
-<div class="my-3" style="width:300px;">
-	<form action="" method="get">
-		<input type="search" name="search" placeholder="Search here..." class="form-control"
-		<?php if(isset($_GET['search'])) { echo "value='" . $_GET['search'] . "'"; } ?>>
+<div class="my-3">
+	
+	<form class="d-lg-none" action="index.php" method="get">
+		<div class="input-group">
+			<input type="search" name="search" placeholder="Search books here..." class="form-control"
+			<?php if(isset($_GET['search'])) { echo "value='" . $_GET['search'] . "'"; } ?>>
+			<button class="btn btn-primary">Search</button>
+		</div>
 	</form>
 
 	<?php
@@ -42,7 +46,7 @@ $query_run = mysqli_query($conn, $sql);
 
 </div>
 
-<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
 
 	<?php
 	while($row = mysqli_fetch_assoc($query_run)){
@@ -51,7 +55,7 @@ $query_run = mysqli_query($conn, $sql);
 	<div class="col">
 		<div class="card h-100">
 			
-			<img src="<?php echo $row['book_image']; ?>" class="card-img-top">
+			<img src="<?php echo $row['book_image']; ?>" class="card-img-top" style="max-height: 300px; width:auto;">
 			<div class="card-body">
 				<h5 class="card-title">
 					<a href="book.php?id=<?php echo $row["book_id"]; ?>">

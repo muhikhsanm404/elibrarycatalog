@@ -35,9 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $year = $_POST['year'];
         $description = $_POST['description'];
 
-        $sql = "UPDATE books SET name = '$name', author_id = '$author_id', cat_id = '$cat_id', year = '$year', description = '$description' WHERE id = '$book_id';";
+        $sql = "UPDATE books SET name = ?, author_id = ?, cat_id = ?, year = ?, description = ? WHERE id = '$book_id';";
         
-        $result = mysqli_query($conn, $sql);
+        $updateBookStatement = mysqli_prepare($conn, $sql);
+
+        mysqli_stmt_bind_param($updateBookStatement, "siiss", $name, $author_id, $cat_id, $year, $description);
+
+        $result = mysqli_stmt_execute($updateBookStatement);
 
         if ($result) {
             echo '<script> alert("Book Updated Successfully"); </script>';
@@ -70,9 +74,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $image = "book_images/" . $image_name;
         $pdf = "pdfs/" . $pdf_name;
 
-        $sql = "INSERT INTO books (name, author_id, cat_id, year, description, image, pdf) VALUES ('$name', '$author_id', '$cat_id', '$year', '$description', '$image', '$pdf');";
+        $sql = "INSERT INTO books (name, author_id, cat_id, year, description, image, pdf) VALUES (?, ?, ?, ?, ?, ?, ?);";
+        
+        $addBookStatement = mysqli_prepare($conn, $sql);
 
-        $result = mysqli_query($conn, $sql);
+        mysqli_stmt_bind_param($addBookStatement, "siissss", $name, $author_id, $cat_id, $year, $description, $image, $pdf);
+
+        $result = mysqli_stmt_execute($addBookStatement);
 
         if ($result) {
             echo '<script> alert("Book Added Successfully"); </script>';
@@ -224,7 +232,7 @@ if (isset($_GET['id'])) {
         <label>PDF:</label>
         <input type="file" class="form-control" name="pdf">
     </div>
-    <input name="add" type="submit" class="btn custom-bg" value="Create Profile">
+    <input name="add" type="submit" class="btn custom-bg" value="Add Book">
 </form>
 
 <?php

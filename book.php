@@ -66,8 +66,8 @@ $row = mysqli_fetch_assoc($res);
 
 <div class="row">
 
-    <div class="col-6 border-bottom py-2">
-        <img src="<?php echo $row['book_image']; ?>" class="img-fluid">
+    <div class="col-6 border-bottom py-2 text-center">
+        <img src="<?php echo $row['book_image']; ?>" class="img-fluid shadow">
     </div>
 
     <div class="col-6 border-bottom py-2">
@@ -77,7 +77,7 @@ $row = mysqli_fetch_assoc($res);
     </div>
 
     <div class="col-6 border-top py-2">
-        <h1>
+        <h1 class="text-center">
             <?php echo $row['book_name']; ?>
         </h1>
         
