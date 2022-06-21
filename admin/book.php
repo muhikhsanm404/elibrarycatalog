@@ -57,15 +57,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         $image_target_dir = "../book_images/";
         $pdf_target_dir = "../pdfs/";
+
+        $image_name = uniqid() . '_' . basename($_FILES["image"]["name"]);
+        $pdf_name = uniqid() . '_' . basename($_FILES["pdf"]["name"]);
         
-        $image_target_file = $image_target_dir . basename($_FILES["image"]["name"]);
-        $pdf_target_file = $pdf_target_dir . basename($_FILES["pdf"]["name"]);
+        $image_target_file = $image_target_dir . $image_name;
+        $pdf_target_file = $pdf_target_dir . $pdf_name;
         
         move_uploaded_file($_FILES["image"]["tmp_name"], $image_target_file);
         move_uploaded_file($_FILES["pdf"]["tmp_name"], $pdf_target_file);
 
-        $image = "book_images/" . basename($_FILES["image"]["name"]);
-        $pdf = "pdfs/" . basename($_FILES["pdf"]["name"]);
+        $image = "book_images/" . $image_name;
+        $pdf = "pdfs/" . $pdf_name;
 
         $sql = "INSERT INTO books (name, author_id, cat_id, year, description, image, pdf) VALUES ('$name', '$author_id', '$cat_id', '$year', '$description', '$image', '$pdf');";
 
