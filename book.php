@@ -143,6 +143,76 @@ $row = mysqli_fetch_assoc($res);
     </div>
 </div>
 
+    <div class="container-fluid">
+        <div class="lead fw-bold my-3">Also Recommended:</div>
+
+
+         <!-- Algorithm Starts -->
+        <?php
+        $book_id = $_GET['id'];
+
+        $sql = "SELECT 
+        books.id AS book_id,
+        books.image AS book_image,
+        books.name AS book_name,
+        category.name AS category_name,
+        books.year AS book_year,
+        authors.name AS author_name,
+        COUNT(also_issued.book_id) AS 'also liked'
+        FROM issued_books AS did_issue
+        JOIN issued_books AS also_issued ON also_issued.user_id = did_issue.user_id AND also_issued.book_id != did_issue.book_id
+        JOIN books ON books.id = also_issued.book_id
+        JOIN category ON books.cat_id = category.id
+        JOIN authors ON books.author_id = authors.id
+        WHERE did_issue.book_id = '$book_id'
+        GROUP BY 1
+        ORDER BY COUNT(also_issued.book_id) DESC
+        LIMIT 5;";
+
+        $recommended_books = mysqli_query($conn, $sql);
+        ?>
+        <!-- Algorithm Ends -->
+
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+
+                <?php
+                while($row = mysqli_fetch_assoc($recommended_books)){
+                ?>
+
+                <div class="col">
+                    <div class="card h-100">
+                
+                        <img src="<?php echo $row['book_image']; ?>" class="card-img-top" style="max-height: 300px; width:auto;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="book.php?id=<?php echo $row["book_id"]; ?>">
+                                    <?php echo $row["book_name"]; ?></h5>
+                                </a>
+                            </h5>
+                            <p class="card-text">
+                                <div>
+                                    Author: <?php echo $row["author_name"]; ?>
+                                </div>
+                                <div>
+                                    Year: <?php echo $row['book_year']; ?>
+                                </div>
+                                <div>
+                                    Genre: <?php echo $row['category_name']; ?>
+                                </div>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <?php
+                }
+                ?>
+        
+            </div>
+
+    </div>
+
 </div>
 
 <?php

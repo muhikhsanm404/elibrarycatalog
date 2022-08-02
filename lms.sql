@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2022 at 08:20 AM
+-- Generation Time: Aug 02, 2022 at 07:07 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -141,9 +141,14 @@ CREATE TABLE `issued_books` (
 --
 
 INSERT INTO `issued_books` (`id`, `book_id`, `user_id`, `issue_date`) VALUES
-(9, 31, 2, '2022-07-05'),
 (11, 32, 4, '2022-07-05'),
-(12, 23, 4, '2022-07-05');
+(12, 23, 4, '2022-07-05'),
+(13, 22, 2, '2022-07-05'),
+(14, 21, 2, '2022-07-05'),
+(15, 24, 2, '2022-07-05'),
+(16, 30, 2, '2022-07-05'),
+(17, 30, 4, '2022-07-05'),
+(18, 20, 2, '2022-08-16');
 
 -- --------------------------------------------------------
 
@@ -238,7 +243,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `issued_books`
 --
 ALTER TABLE `issued_books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `users`
