@@ -56,7 +56,7 @@ include("includes/conn.php");
             </td>
 		</tr>
 	<?php
-	$count += 1;
+	    $count += 1;
 	}
 	?>
 </table>
