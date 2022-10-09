@@ -64,8 +64,8 @@ include("includes/conn.php");
 			$book_name = $row['book_name'];
 			$list_display = "<img class='rounded border' style='height:40px; width=auto;' src='$book_thumb'> $book_name";
 
-            $book_id = $row['book_id'];
-            echo "<a href='book.php?id=$book_id'>" . $list_display . "</a>";
+             $book_id = $row['book_id'];
+             echo "<a href='book.php?id=$book_id'>" . $list_display . "</a>";
 
 			?></td>
 			
