@@ -147,7 +147,7 @@ $row = mysqli_fetch_assoc($res);
         <div class="lead fw-bold my-3">Also Recommended:</div>
 
 
-         <!-- Algorithm Starts -->
+         <!-- Collaborative Filtering Algorithm Starts Here -->
         <?php
         $book_id = $_GET['id'];
 
@@ -171,7 +171,7 @@ $row = mysqli_fetch_assoc($res);
 
         $recommended_books = mysqli_query($conn, $sql);
         ?>
-        <!-- Algorithm Ends -->
+        <!-- Algorithm Ends Here -->
 
             <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
 
