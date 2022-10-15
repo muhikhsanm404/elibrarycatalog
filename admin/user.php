@@ -1,3 +1,4 @@
+<!-- user section starts here -->
 <?php
 include("includes/header.php");
 include("../USER_PERMISSIONS.php");
