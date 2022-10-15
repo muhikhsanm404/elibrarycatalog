@@ -3,7 +3,7 @@ include("includes/header.php");
 include("includes/navbar.php");
 include("USER_PERMISSIONS.php");
 ?>
-
+<!-- algorithm starts here -->
 <?php
 include("includes/conn.php");
 
