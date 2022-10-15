@@ -1,3 +1,4 @@
+// This is the main entry point
 <?php
 include("includes/header.php");
 include("includes/navbar.php");
