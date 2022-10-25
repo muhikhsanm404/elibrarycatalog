@@ -1,4 +1,4 @@
-# eLibrary
+# eLibrary -- Online LMS, 2022
 
 1. Create Database Names 'lms'
 2. Import lms.sql
