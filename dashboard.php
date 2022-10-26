@@ -1,4 +1,5 @@
 <?php
+#dashboard file
 include("includes/header.php");
 include("USER_PERMISSIONS.php");
 
