@@ -1,4 +1,5 @@
 // This is the main entry point
+//Open for contribution 
 // From here the code starts
 <?php
 include("includes/header.php");
