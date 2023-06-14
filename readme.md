@@ -21,5 +21,6 @@
 
 ---------------------------------------
 Default Admin User: admin@gmail.com 
-Default Admin Password : admin
+| Default Admin Password : admin
 ---------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++ Thanks You ++++++++++++++++++++++++++++++++++++++++++++
