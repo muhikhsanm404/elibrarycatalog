@@ -13,7 +13,7 @@
 <b> DOSEN : ABDI PANDU KUSUMA S.Kom.,MT <br> </b>
 
 # APLIKASI WEBSITE KATALOG PERPUSTAKAAN
-[alt_text] (https://github.com/muhikhsanm404/elibrarycatalog/blob/master/ss.JPG) <br>
+![alt text](https://github.com/muhikhsanm404/elibrarycatalog/blob/master/ss.JPG)
 # Usage
 
 1. Create Database Names 'library'
