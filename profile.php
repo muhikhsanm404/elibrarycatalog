@@ -54,11 +54,11 @@ $row = mysqli_fetch_assoc($result);
 			<input type="text" class="form-control" value="<?php echo $row['email']; ?>" name="email">
 		</div>
 		<div class="form-group mb-2">
-			<label>Mobile:</label>
+			<label>No HP:</label>
 			<input type="text" class="form-control" value="<?php echo $row['mobile']; ?>" name="mobile">
 		</div>
 		<div class="form-group mb-2">
-			<label>Address:</label>
+			<label>Alamat:</label>
 			<textarea rows="3" cols="40" name="address" class="form-control"><?php echo $row['address']; ?></textarea>
 		</div>
 		<button  type="submit" name="update" class="btn custom-bg">Update Profile</button>

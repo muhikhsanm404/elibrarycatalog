@@ -5,23 +5,23 @@
   </li>
 
   <li class="list-group-item">
-    <a href="users.php">Users</a>
+    <a href="users.php">Akun</a>
   </li>
 
   <li class="list-group-item">
-    <a href="authors.php">Authors</a>
+    <a href="authors.php">Penulis</a>
   </li>
 
   <li class="list-group-item">
-    <a href="genres.php">Genres</a>
-  </li>
-    
-  <li class="list-group-item">
-      <a href="books.php">Books</a>
+    <a href="genres.php">Genre</a>
   </li>
 
   <li class="list-group-item">
-      <a href="issued_books.php">Issued Books</a>
+    <a href="books.php">Buku</a>
+  </li>
+
+  <li class="list-group-item">
+    <a href="issued_books.php">History</a>
   </li>
 
 </ul>

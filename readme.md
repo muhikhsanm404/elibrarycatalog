@@ -1,14 +1,15 @@
-# eLibrary -- Online LMS, 2022
-# Made in Nepal
-# Suggestions welcome
-##made from scratch
+# eLibrary -- Online LMS, 2023
 
+# Tugas Kelompok 1
 
-1. Create Database Names 'lms'
-2. Import lms.sql
+# Web Programming
+
+# Usage
+
+1. Create Database Names 'library'
+2. Import library.sql
 
 ---
 
 Default Admin User: admin@gmail.com
-
-Defailt Admin Pass: admin
+Defailt Admin Password : admin

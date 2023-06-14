@@ -1,5 +1,5 @@
 <footer class="custom-bg mt-5 py-3 text-center" style="color:#fff;">
-    &copy; 2022, ELibrary.
+    &copy; 2023, ELibrary Kelompok 1.
 </footer>
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>

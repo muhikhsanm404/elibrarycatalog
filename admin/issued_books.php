@@ -19,37 +19,37 @@ if (isset($_GET['id'])) {
 	$result = mysqli_query($conn, $sql);
 
 	if ($result) {
-		echo '<script> alert("Issue Book Deleted Successfully"); </script>';
+		echo '<script> alert("Buku Terbit Berhasil DiHapus"); </script>';
 	} else {
-		echo '<script> alert("Issue Book Deleted Failed"); </script>';
+		echo '<script> alert("Buku Terbit Gagal DiHapus"); </script>';
 	}
 }
 
 ?>
 <div class="container mt-3">
 
-<div class="row">
+	<div class="row">
 
-<div class="col-3">
-<?php include("includes/sidebar.php"); ?>
-</div>
+		<div class="col-3">
+			<?php include("includes/sidebar.php"); ?>
+		</div>
 
-<div class="col-9">
+		<div class="col-9">
 
-	<div class="my-2 h2">
-		All Issued Books
-	</div>
+			<div class="my-2 h2">
+				History
+			</div>
 
-	<table class="table table-bordered">
-	<tr>
-		<th>S.N.</th>
-		<th>Book</th>
-        <th>User</th>
-        <th>Due Date</th>
-        <th>Action</th>
-	</tr>
-	<?php
-		$query = "SELECT
+			<table class="table table-bordered">
+				<tr>
+					<th>S.N.</th>
+					<th>Book</th>
+					<th>User</th>
+					<th>Due Date</th>
+					<th>Action</th>
+				</tr>
+				<?php
+				$query = "SELECT
         books.name AS book_name,
         users.name AS user_name,
         issued_books.issue_date AS due_date,
@@ -59,39 +59,39 @@ if (isset($_GET['id'])) {
         JOIN users ON issued_books.user_id = users.id;
 		";
 
-		$query_run = mysqli_query($conn, $query);
+				$query_run = mysqli_query($conn, $query);
 
-		$count = 1;
-		while($row = mysqli_fetch_assoc($query_run)){
-	?>
-		<tr>
-			<td><?php echo $count; ?></td>
-            <td><?php echo $row['book_name']; ?></td>
-            <td><?php echo $row['user_name']; ?></td>
-            <td><?php
+				$count = 1;
+				while ($row = mysqli_fetch_assoc($query_run)) {
+				?>
+					<tr>
+						<td><?php echo $count; ?></td>
+						<td><?php echo $row['book_name']; ?></td>
+						<td><?php echo $row['user_name']; ?></td>
+						<td><?php
 
-                if (date('Y-m-d') > $row['due_date']) {
-					echo '<span class="text-danger">Expired!</span>';
-				} else {
-                    echo $row['due_date'];
-                }
+							if (date('Y-m-d') > $row['due_date']) {
+								echo '<span class="text-danger">Expired!</span>';
+							} else {
+								echo $row['due_date'];
+							}
 
-            ?></td>
-			<td>
-                <a href="?id=<?php echo $row['issue_id']; ?>">
-                    Delete
-                </a>
-            </td>
-		</tr>
-	<?php
-	$count += 1;
-	}
-	?>
-</table>
+							?></td>
+						<td>
+							<a href="?id=<?php echo $row['issue_id']; ?>">
+								Delete
+							</a>
+						</td>
+					</tr>
+				<?php
+					$count += 1;
+				}
+				?>
+			</table>
 
-</div>
+		</div>
 
-</div>
+	</div>
 
 </div>
 

@@ -1,26 +1,25 @@
 a {
-    color: #FF8B3D !important;
-    text-decoration: none !important;
+  color: #ff8b3d !important;
+  text-decoration: none !important;
 }
 
 a:hover {
-    color: #c1692f !important;
+  color: #c1692f !important;
 }
 
 a.btn:hover {
-    color: #FF8B3D !important;
+  color: #ff8b3d !important;
 }
 
 .custom-bg {
-    background-color: #27445C !important;
+  background-color: #710a0a !important;
 }
 
 button.custom-bg,
 input.custom-bg {
-    color: #FF8B3D !important;
+  color: #ff8b3d !important;
 }
 
-
 .footer-links-ul {
-    list-style: none;
+  list-style: none;
 }

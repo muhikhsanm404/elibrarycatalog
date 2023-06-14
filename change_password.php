@@ -1,5 +1,5 @@
 <?php
-#password change here
+
 include("includes/header.php");
 include("USER_PERMISSIONS.php");
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	$row = mysqli_fetch_assoc($result);
 
-	if($row['password'] == $old) {
+	if ($row['password'] == $old) {
 
 		$sql = "UPDATE users SET password = '$new' WHERE id = '$user_id';";
 
@@ -42,14 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		} else {
 			echo '<script> alert("Password Updated Failed"); </script>';
 		}
-
 	} else {
 		echo '<script> alert("Old Password is Wrong"); </script>';
 	}
-
 }
 ?>
-	
+
 <div class="container my-4 rounded border shadow p-3" style="width:400px;">
 	<form action="" method="post">
 		<div class="form-group mb-2">
@@ -60,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<label>Enter New Password:</label>
 			<input type="password" name="new_password" class="form-control">
 		</div>
-		<button  type="submit" name="update" class="btn custom-bg">Update Profile</button>
+		<button type="submit" name="update" class="btn custom-bg">Update Profile</button>
 	</form>
 </div>
 

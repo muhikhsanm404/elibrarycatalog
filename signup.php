@@ -1,6 +1,5 @@
 <?php
-#header file
-#contribute
+
 include("includes/header.php");
 include("USER_PERMISSIONS.php");
 
@@ -33,43 +32,42 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	} else {
 		echo '<script> alert("User Added Failed"); </script>';
 	}
-
 }
 
 include("includes/navbar.php");
 ?>
 
-<div class="container mt-3 rounded border shadow p-3" style="width:400px;">
-<h3 class=text-center>User Registration Form</h3>
+<div class="container mt-3 rounded border shadow p-3" style="width:300px;">
+	<h3 class=text-center>Pendaftaran Akun Formulir</h3>
 
-<form action="" method="post">
-	<div class="form-group mb-2">
-		<label for="name">Full Name:</label>
-		<input type="text" name="name" class="form-control" required>
-	</div>
-	<div class="form-group mb-2">
-		<label for="name">Email ID:</label>
-		<input type="text" name="email" class="form-control" required>
-	</div>
-	<div class="form-group mb-2">
-		<label for="name">Password:</label>
-		<input type="password" name="password" class="form-control" required>
-	</div>
-	<div class="form-group mb-2">
-		<label for="name">Mobile Number:</label>
-		<input type="text" name="mobile" class="form-control" required>
-	</div>
-	<div class="form-group mb-2">
-		<label for="name">Address:</label>
-		<textarea rows="3" cols="40" class="form-control" name="address"></textarea>
-	</div>
-	<div class="form-group mb-2 text-center">
-		<button type="submit" class="btn btn-primary" style="background-color:#27445C; color:#FF8B3D; border:none;">Register</button>
-	</div>
-</form>
+	<form action="" method="post">
+		<div class="form-group mb-2">
+			<label for="name">Nama Lengkap :</label>
+			<input type="text" name="name" class="form-control" required>
+		</div>
+		<div class="form-group mb-2">
+			<label for="name">Email:</label>
+			<input type="text" name="email" class="form-control" required>
+		</div>
+		<div class="form-group mb-2">
+			<label for="name">Password:</label>
+			<input type="password" name="password" class="form-control" required>
+		</div>
+		<div class="form-group mb-2">
+			<label for="name">No HP:</label>
+			<input type="text" name="mobile" class="form-control" required>
+		</div>
+		<div class="form-group mb-2">
+			<label for="name">Alamat:</label>
+			<textarea rows="3" cols="40" class="form-control" name="address"></textarea>
+		</div>
+		<div class="form-group mb-2 text-center">
+			<button type="submit" class="btn btn-primary" style="background-color:#710a0a; color:#fff; border:none;">Register</button>
+		</div>
+	</form>
 
 </div>
-			
+
 <?php
 include("includes/footer.php");
 ?>

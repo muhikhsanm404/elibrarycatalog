@@ -24,12 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$result = mysqli_query($conn, $sql);
 
 	if ($result) {
-		echo '<script> alert("Profile Updated Successfully"); </script>';
+		echo '<script> alert("Update Profil Berhasil"); </script>';
 		echo '<script> window.location.href = "dashboard.php"; </script>';
 	} else {
-		echo '<script> alert("Profile Updated Failed"); </script>';
+		echo '<script> alert("Update Profil Gagal"); </script>';
 	}
-
 }
 
 $sql = "SELECT * FROM users WHERE id = '$user_id';";
@@ -38,7 +37,7 @@ $result = mysqli_query($conn, $sql);
 
 $row = mysqli_fetch_assoc($result);
 ?>
-	
+
 <div class="container my-4 rounded border shadow p-3" style="width:400px;">
 	<form action="" method="post">
 		<div class="form-group mb-2">
@@ -57,7 +56,7 @@ $row = mysqli_fetch_assoc($result);
 			<label>Address:</label>
 			<textarea rows="3" cols="40" name="address" class="form-control"><?php echo $row['address']; ?></textarea>
 		</div>
-		<button  type="submit" name="update" class="btn custom-bg">Update Profile</button>
+		<button type="submit" name="update" class="btn custom-bg">Update Profile</button>
 	</form>
 </div>
 

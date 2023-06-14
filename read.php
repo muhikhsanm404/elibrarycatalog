@@ -1,9 +1,5 @@
 <?php
   
-// Store the file name into variable
-
-
-
 $file = $_GET['file'];
 $filename = 'filename.pdf';
   
@@ -16,7 +12,5 @@ header('Content-Transfer-Encoding: binary');
   
 header('Accept-Ranges: bytes');
   
-// Read the file
+// Baca file
 @readfile($file);
-  
-?>

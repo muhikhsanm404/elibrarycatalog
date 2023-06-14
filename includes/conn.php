@@ -2,9 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "";
-$db = "lms";
+$pass = "siber";
+$db = "elibrary";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
-
-?>
