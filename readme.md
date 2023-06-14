@@ -9,6 +9,9 @@
 3) AGENG EKA PERMANA PUTRA	(21104410048)  [Github](https://github.com/) <br>
 4) M. IKHSAN MANDIRRI 		(21104410070)  [Github](https://github.com/muhikhsanm404) <br>
 
+<b> PRODI : TEKNIK INFORMATIKA<br> </b>
+<b> DOSEN : ABDI PANDU KUSUMA S.Kom.,MT <br> </b>
+
 # APLIKASI WEBSITE KATALOG PERPUSTAKAAN
 
 # Usage
@@ -18,5 +21,5 @@
 
 ---------------------------------------
 Default Admin User: admin@gmail.com 
-Defailt Admin Password : admin
+Default Admin Password : admin
 ---------------------------------------
