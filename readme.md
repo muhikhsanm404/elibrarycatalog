@@ -4,11 +4,11 @@
 
 <b> NAMA KELOMPOK 1 : <br> </b>
 
-1) ARI BUDIANTO 		      (21104410038)  [Github](https://github.com/) <br>
-2) MUCH MIFTAKHUL RIZAL 	(21104410044)  [Github](https://github.com/) <br>
-3) AGENG EKA PERMANA PUTRA	(21104410048)  [Github](https://github.com/) <br>
-4) M. IKHSAN MANDIRRI 		(21104410070)  [Github](https://github.com/muhikhsanm404) <br>
-
+1) ARI BUDIANTO 		      (21104410038)  <br>
+2) MUCH MIFTAKHUL RIZAL 	(21104410044)  <br>
+3) AGENG EKA PERMANA PUTRA	(21104410048)  <br>
+4) M. IKHSAN MANDIRRI 		(21104410070)  <br>
+5) 
 <b> PRODI : TEKNIK INFORMATIKA<br> </b>
 <b> DOSEN : ABDI PANDU KUSUMA S.Kom.,MT <br> </b>
 
